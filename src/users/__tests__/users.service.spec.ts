@@ -124,7 +124,7 @@ describe('UsersService', () => {
         await service.getAll({
           limit: 10,
           skip: 0,
-          q: "1",
+          q: '1',
         } as GetAllUsersInput),
       ).toEqual(users);
     });

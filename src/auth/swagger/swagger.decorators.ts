@@ -51,8 +51,7 @@ export function ApiRegisterOperation() {
       status: HttpStatus.CREATED,
       description: 'User registered successfully',
       example: {
-        access_token:
-          'ey123token',
+        access_token: 'ey123token',
       },
     }),
     ApiResponse({

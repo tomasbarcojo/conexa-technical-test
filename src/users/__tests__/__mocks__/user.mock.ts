@@ -1,5 +1,5 @@
-import { UserRoles } from "../../../../core/enums/user_roles.enum";
-import { User } from "../../../users/entities/user.entity";
+import { UserRoles } from '../../../../core/enums/user_roles.enum';
+import { User } from '../../../users/entities/user.entity';
 
 export const userMock: User = {
   id: 1,

@@ -26,27 +26,42 @@ export class CreateMovieDto {
   @IsDateString()
   release_date: string;
 
-  @ApiProperty({ description: 'The species featured in the movie', type: [String] })
+  @ApiProperty({
+    description: 'The species featured in the movie',
+    type: [String],
+  })
   @IsArray()
   @IsString({ each: true })
   species: string[];
 
-  @ApiProperty({ description: 'The starships featured in the movie', type: [String] })
+  @ApiProperty({
+    description: 'The starships featured in the movie',
+    type: [String],
+  })
   @IsArray()
   @IsString({ each: true })
   starships: string[];
 
-  @ApiProperty({ description: 'The vehicles featured in the movie', type: [String] })
+  @ApiProperty({
+    description: 'The vehicles featured in the movie',
+    type: [String],
+  })
   @IsArray()
   @IsString({ each: true })
   vehicles: string[];
 
-  @ApiProperty({ description: 'The characters featured in the movie', type: [String] })
+  @ApiProperty({
+    description: 'The characters featured in the movie',
+    type: [String],
+  })
   @IsArray()
   @IsString({ each: true })
   characters: string[];
 
-  @ApiProperty({ description: 'The planets featured in the movie', type: [String] })
+  @ApiProperty({
+    description: 'The planets featured in the movie',
+    type: [String],
+  })
   @IsArray()
   @IsString({ each: true })
   planets: string[];

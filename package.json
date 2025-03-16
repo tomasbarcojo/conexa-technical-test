@@ -8,8 +8,6 @@
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "build": "nest build",
-    "copy-files": "copyfiles --error --up 1 ./assets/*.xlsx dist/assets",
-    "postbuild": "npm run copy-files",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -19,8 +17,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
     "migration:run": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d src/ormconfig.ts",
     "migration:generate": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:generate src/database/migrations/migration -d src/ormconfig.ts",
     "migration:revert": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d src/ormconfig.ts"
