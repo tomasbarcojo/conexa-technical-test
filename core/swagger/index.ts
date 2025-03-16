@@ -7,10 +7,17 @@ export function createdocument(app: INestApplication): OpenAPIObject {
     .setDescription(
       'This is a technical test for Conexa company where the requirements are to create a REST API using NestJS about handling users, authentication, authorization and handling movies from Star Wars API.\n\nReference to the link below for more information ⬇️',
     )
-    .setExternalDoc('Conexa Technical Test', 'https://conexatech.notion.site/Backend-Nest-Ssr-Test-d3fa3d4c614249b2afeac5d8cf98784f')
+    .setExternalDoc(
+      'Conexa Technical Test',
+      'https://conexatech.notion.site/Backend-Nest-Ssr-Test-d3fa3d4c614249b2afeac5d8cf98784f',
+    )
     .setVersion('1.0.0')
     .addBearerAuth()
     .addServer(`http://localhost:${process.env.PORT}`, 'Local')
+    .addServer(
+      'https://conexa-technical-test-production.up.railway.app',
+      'Production',
+    )
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
